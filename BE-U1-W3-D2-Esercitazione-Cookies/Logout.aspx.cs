@@ -26,9 +26,9 @@ namespace BE_U1_W3_D2_Esercitazione_Cookies
         {
         if(Request.Cookies["Login_cookie"] != null)
             {
-                HttpCookie cookie = new HttpCookie("Logout_cookie");
-                cookie.Expires = DateTime.Now.AddDays(-1);
-                Response.Cookies.Add(cookie);
+                HttpCookie cookie2 = new HttpCookie("Login_cookie");
+                cookie2.Expires = DateTime.Now.AddDays(-1);
+                Response.Cookies.Add(cookie2);
                 Response.Redirect("Login.aspx");
             }
         }

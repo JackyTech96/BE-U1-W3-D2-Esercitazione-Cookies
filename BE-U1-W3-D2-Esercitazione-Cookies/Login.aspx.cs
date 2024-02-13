@@ -21,13 +21,14 @@ namespace BE_U1_W3_D2_Esercitazione_Cookies
             cookie.Values["password"] = Password.Text;
             cookie.Expires = DateTime.Now.AddDays(10);
             Response.Cookies.Add(cookie);
-            Response.Redirect("Logout.aspx");
+           
 
             if (Request.Cookies["cookie"] != null)
             {
                 Response.Write(Request.Cookies["Login_cookie"]["username"] + "<br/>" +
                     Request.Cookies["Login_cookie"]["password"]);
-            }
+            } 
+            Response.Redirect("Logout.aspx");
         }
     }
 }
